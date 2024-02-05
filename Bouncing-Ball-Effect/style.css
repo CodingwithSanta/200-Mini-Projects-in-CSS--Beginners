@@ -1,0 +1,79 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+.left-corner-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    text-align: left;
+    letter-spacing: 2px;
+    color: #717470;
+    font-family: oswald;
+    font-size: 12px; 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+
+}
+div{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div ul{
+    display: flex;
+    border-bottom: 5px solid lightcoral;
+
+}
+div ul li{
+    width: 50px;
+    height: 50px;
+    background-color: lightyellow;
+    list-style: none;
+    margin: 0 10px;
+    border-radius: 60%;
+    animation:BouncyBall 1s linear infinite;
+
+}
+@keyframes BouncyBall
+{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-150px);
+    }
+    0%{
+        transform: translateY();
+    }
+    
+}
+
+ul li:nth-child(1){
+    animation-delay:.2s;
+    background-color: lightblue;
+}
+
+ul li:nth-child(2){
+    animation-delay:.3s;
+    background-color: lightseagreen;
+}
+
+ul li:nth-child(3){
+    animation-delay:.4s;
+    background-color: lightpink;
+}
+
+ul li:nth-child(4){
+    animation-delay:.5s;
+    background-color: lightgray;
+}
+ul li:nth-child(5){
+    animation-delay:.6s;
+}
