@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000000;
+}
+.text {
+    position: absolute;
+    margin: 0;
+    padding:3px;
+    left: 0;
+    top: 0;
+    text-align: left;
+    letter-spacing: 2px;
+    color: #717470;
+    font-family: Oswald;
+    font-size: 12px;
+}
+
+.menu
+{
+    position: relative;
+    width: 280px;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu li
+{
+    position:absolute;
+    left: 0;
+    list-style: none;
+    transition: 0.5s;
+    transition-delay: calc(0.1s * var(--i));
+    transform-origin: 140px;
+    color: #fff;
+    transform: rotate(0deg) translateX(110px);
+}
+.menu.active li 
+{
+    transform: rotate(calc(360deg / 9 * var(--i)))
+    translateX(0px);
+}
+
+.menu li a
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    color: var(--clr);
+    border: 2px solid var(--clr);
+    border-radius: 50%;
+    font-size: 1.5em;
+    transform: rotate(calc(360deg / -9 * var(--i)))
+}
+.menu li a:hover
+{
+    background: var(--clr);
+    color: #333;
+    box-shadow: 0 0 10px var(--clr),
+                0 0 30px var(--clr),
+                0 0 50px var(--clr);
+}
+.menu .toggle
+{
+    position:absolute;
+    width: 60px;
+    height:60px;
+    background: #2f363e;
+    border: 2px solid #fff;
+    border-radius:60%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10000;
+    font-size: 2em;
+    transition: transform 1.25s;
+
+}
+.menu.active .toggle
+{
+    transform: rotate(315deg);
+
+}
